@@ -30,7 +30,7 @@ describe('SauceService', () => {
 
       // Setting up setSauce call
       cold(setSauceCallMarbles, {a: 'new sauce'})
-        .subscribe(sauce => {service.setSauce(sauce)});
+        .subscribe(sauce => service.setSauce(sauce));
 
       // Checking sauce$
       const expected = cold(expectedMarbles, {b: 'initial sauce', c: 'new sauce'});
